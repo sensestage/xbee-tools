@@ -1,0 +1,34 @@
+XBee tools for configuration, example of use:
+
+$ cd python
+
+Start the xbee-serial-terminal.py: 
+$ python xbee-serial-terminal.py
+
+Select the baudrate: 
+
+xbee% baudrate 57600
+
+Select the serial port: 
+xbee% serial /dev/ttyUSB0 (your serial path may be different!)
+
+Enter AT command mode: 
+xbee% +++ 
+and wait for OK
+
+Change the power level: 
+xbee% ATPL 0
+
+Change to API mode:
+xbee% ATAP 2
+
+Change the node id (for a node, not for coordinator): 
+xbee% ATMY FFFA
+
+Query a setting, e.g. MY:
+xbee% ATMY
+reply will appear
+
+Write all the changes, so the XBee remembers them for next time:
+xbee% ATWR
+
